@@ -23,7 +23,6 @@ import {
   Grid,
   Move3D,
 } from "lucide-react";
-import geoJsonData from "./zones.geojson";
 
 type Feature = {
   type: "Feature";
@@ -36,7 +35,4239 @@ type GeoJSON = {
   features: Feature[];
 };
 
-const geoJson: GeoJSON = 
+const geoJson: GeoJSON = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1026.935669,
+              849.098854
+            ],
+            [
+              1026.935669,
+              974.560385
+            ],
+            [
+              1171.418737,
+              974.560385
+            ],
+            [
+              1171.418737,
+              849.098854
+            ],
+            [
+              1026.935669,
+              849.098854
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "Meeting Room",
+        "name": "Aveeno",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1026.935669,
+              771.5
+            ],
+            [
+              1026.935669,
+              849.098854
+            ],
+            [
+              1169.92349,
+              849.098854
+            ],
+            [
+              1169.92349,
+              771.5
+            ],
+            [
+              1026.935669,
+              771.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "connect room",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1056.225747,
+              539.5
+            ],
+            [
+              1056.225747,
+              610
+            ],
+            [
+              1109.965909,
+              610
+            ],
+            [
+              1109.965909,
+              539.5
+            ],
+            [
+              1056.225747,
+              539.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "Solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1115.214948,
+              540.5
+            ],
+            [
+              1115.214948,
+              610.5
+            ],
+            [
+              1167.20543,
+              610.5
+            ],
+            [
+              1167.20543,
+              540.5
+            ],
+            [
+              1115.214948,
+              540.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1057.22561,
+              455.5
+            ],
+            [
+              1057.22561,
+              534.5
+            ],
+            [
+              1167.205476,
+              534.5
+            ],
+            [
+              1167.205476,
+              455.5
+            ],
+            [
+              1057.22561,
+              455.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1057.474192,
+              334.5
+            ],
+            [
+              1057.474192,
+              450.5
+            ],
+            [
+              1166.204286,
+              450.5
+            ],
+            [
+              1166.204286,
+              334.5
+            ],
+            [
+              1057.474192,
+              334.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1047.92953,
+              166.5
+            ],
+            [
+              1047.92953,
+              324.5
+            ],
+            [
+              1167.907566,
+              324.5
+            ],
+            [
+              1167.907566,
+              166.5
+            ],
+            [
+              1047.92953,
+              166.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "7"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1047.92953,
+              41.5
+            ],
+            [
+              1047.92953,
+              166.5
+            ],
+            [
+              1284.88615,
+              166.5
+            ],
+            [
+              1284.88615,
+              41.5
+            ],
+            [
+              1047.92953,
+              41.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "large meeting room",
+        "name": "",
+        "items": [
+          "11"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1042.486181,
+              620.5
+            ],
+            [
+              1042.486181,
+              771.5
+            ],
+            [
+              1168.463118,
+              771.5
+            ],
+            [
+              1168.463118,
+              620.5
+            ],
+            [
+              1042.486181,
+              620.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "Open meeting room",
+        "name": "",
+        "items": [
+          "8"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1234.44399,
+              451.5
+            ],
+            [
+              1234.44399,
+              549
+            ],
+            [
+              1388.415802,
+              549
+            ],
+            [
+              1388.415802,
+              451.5
+            ],
+            [
+              1234.44399,
+              451.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private meeting",
+        "name": "",
+        "items": [
+          "6"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1228.445088,
+              339
+            ],
+            [
+              1228.445088,
+              443.5
+            ],
+            [
+              1329.92651,
+              443.5
+            ],
+            [
+              1329.92651,
+              339
+            ],
+            [
+              1228.445088,
+              339
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1339.92468,
+              342
+            ],
+            [
+              1339.92468,
+              440
+            ],
+            [
+              1444.905461,
+              440
+            ],
+            [
+              1444.905461,
+              342
+            ],
+            [
+              1339.92468,
+              342
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "5"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1512.502425,
+              914.75
+            ],
+            [
+              1512.502425,
+              974.75
+            ],
+            [
+              1591.737919,
+              974.75
+            ],
+            [
+              1591.737919,
+              914.75
+            ],
+            [
+              1512.502425,
+              914.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1599.986409,
+              914.75
+            ],
+            [
+              1599.986409,
+              976.5
+            ],
+            [
+              1704.467282,
+              976.5
+            ],
+            [
+              1704.467282,
+              914.75
+            ],
+            [
+              1599.986409,
+              914.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1714.715406,
+              889.75
+            ],
+            [
+              1714.715406,
+              1010.75
+            ],
+            [
+              1820.696004,
+              1010.75
+            ],
+            [
+              1820.696004,
+              889.75
+            ],
+            [
+              1714.715406,
+              889.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1505.930079,
+              727
+            ],
+            [
+              1505.930079,
+              902
+            ],
+            [
+              1633.90665,
+              902
+            ],
+            [
+              1633.90665,
+              727
+            ],
+            [
+              1505.930079,
+              727
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "medium meeting room",
+        "name": "",
+        "items": [
+          "9"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1506.420104,
+              541
+            ],
+            [
+              1506.420104,
+              717
+            ],
+            [
+              1633.896766,
+              717
+            ],
+            [
+              1633.896766,
+              541
+            ],
+            [
+              1506.420104,
+              541
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "medium meeting room",
+        "name": "",
+        "items": [
+          "9"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1644.924954,
+              769.5
+            ],
+            [
+              1644.924954,
+              874
+            ],
+            [
+              1827.39155,
+              874
+            ],
+            [
+              1827.39155,
+              769.5
+            ],
+            [
+              1644.924954,
+              769.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "battery room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1645.924771,
+              676
+            ],
+            [
+              1645.924771,
+              757
+            ],
+            [
+              1829.891092,
+              757
+            ],
+            [
+              1829.891092,
+              676
+            ],
+            [
+              1645.924771,
+              676
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "ups room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1638.965314,
+              595.25
+            ],
+            [
+              1638.965314,
+              657
+            ],
+            [
+              1747.445455,
+              657
+            ],
+            [
+              1747.445455,
+              595.25
+            ],
+            [
+              1638.965314,
+              595.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "mdf room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1506.420104,
+              460.5
+            ],
+            [
+              1506.420104,
+              541
+            ],
+            [
+              1566.923764,
+              541
+            ],
+            [
+              1566.923764,
+              460.5
+            ],
+            [
+              1506.420104,
+              460.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1566.923764,
+              458
+            ],
+            [
+              1566.923764,
+              541
+            ],
+            [
+              1631.911867,
+              541
+            ],
+            [
+              1631.911867,
+              458
+            ],
+            [
+              1566.923764,
+              458
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1642.909854,
+              456.5
+            ],
+            [
+              1642.909854,
+              514.5
+            ],
+            [
+              1751.889902,
+              514.5
+            ],
+            [
+              1751.889902,
+              456.5
+            ],
+            [
+              1642.909854,
+              456.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "copy-print",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1505.93493,
+              242.5
+            ],
+            [
+              1505.93493,
+              399
+            ],
+            [
+              1595.918456,
+              399
+            ],
+            [
+              1595.918456,
+              242.5
+            ],
+            [
+              1505.93493,
+              242.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1611.466595,
+              135
+            ],
+            [
+              1611.466595,
+              208
+            ],
+            [
+              1656.708313,
+              208
+            ],
+            [
+              1656.708313,
+              135
+            ],
+            [
+              1611.466595,
+              135
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1661.957352,
+              134.25
+            ],
+            [
+              1661.957352,
+              208.25
+            ],
+            [
+              1701.950031,
+              208.25
+            ],
+            [
+              1701.950031,
+              134.25
+            ],
+            [
+              1661.957352,
+              134.25
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1709.198703,
+              134.5
+            ],
+            [
+              1709.198703,
+              206.5
+            ],
+            [
+              1751.191016,
+              206.5
+            ],
+            [
+              1751.191016,
+              134.5
+            ],
+            [
+              1709.198703,
+              134.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1758.689643,
+              134.75
+            ],
+            [
+              1758.689643,
+              206.25
+            ],
+            [
+              1800.93191,
+              206.25
+            ],
+            [
+              1800.93191,
+              134.75
+            ],
+            [
+              1758.689643,
+              134.75
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1601.89457,
+              53
+            ],
+            [
+              1601.89457,
+              125
+            ],
+            [
+              1859.847346,
+              125
+            ],
+            [
+              1859.847346,
+              53
+            ],
+            [
+              1601.89457,
+              53
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "service balcony",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1750.456162,
+              1073.5
+            ],
+            [
+              1750.456162,
+              1147.5
+            ],
+            [
+              1794.448109,
+              1147.5
+            ],
+            [
+              1794.448109,
+              1073.5
+            ],
+            [
+              1750.456162,
+              1073.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1804.446278,
+              1073
+            ],
+            [
+              1804.446278,
+              1145
+            ],
+            [
+              1843.43914,
+              1145
+            ],
+            [
+              1843.43914,
+              1073
+            ],
+            [
+              1804.446278,
+              1073
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2077.396309,
+              1069
+            ],
+            [
+              2077.396309,
+              1142.5
+            ],
+            [
+              2120.888347,
+              1142.5
+            ],
+            [
+              2120.888347,
+              1069
+            ],
+            [
+              2077.396309,
+              1069
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2120.888347,
+              1069
+            ],
+            [
+              2120.888347,
+              1142.5
+            ],
+            [
+              2170.379286,
+              1142.5
+            ],
+            [
+              2170.379286,
+              1069
+            ],
+            [
+              2120.888347,
+              1069
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo room",
+        "name": "",
+        "items": [
+          "1"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1901.398322,
+              905
+            ],
+            [
+              1901.398322,
+              1010.5
+            ],
+            [
+              1991.881757,
+              1010.5
+            ],
+            [
+              1991.881757,
+              905
+            ],
+            [
+              1901.398322,
+              905
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2002.879744,
+              905.5
+            ],
+            [
+              2002.879744,
+              1010.5
+            ],
+            [
+              2114.359335,
+              1010.5
+            ],
+            [
+              2114.359335,
+              905.5
+            ],
+            [
+              2002.879744,
+              905.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private room",
+        "name": "",
+        "items": [
+          "6"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2125.387614,
+              894.5
+            ],
+            [
+              2125.387614,
+              1010.5
+            ],
+            [
+              2298.355949,
+              1010.5
+            ],
+            [
+              2298.355949,
+              894.5
+            ],
+            [
+              2125.387614,
+              894.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1881.425046,
+              347.5
+            ],
+            [
+              1881.425046,
+              399.5
+            ],
+            [
+              1951.412233,
+              399.5
+            ],
+            [
+              1951.412233,
+              347.5
+            ],
+            [
+              1881.425046,
+              347.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1879.425412,
+              291
+            ],
+            [
+              1879.425412,
+              337.5
+            ],
+            [
+              1951.912142,
+              337.5
+            ],
+            [
+              1951.912142,
+              291
+            ],
+            [
+              1879.425412,
+              291
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2103.384411,
+              351
+            ],
+            [
+              2103.384411,
+              474.5
+            ],
+            [
+              2196.867297,
+              474.5
+            ],
+            [
+              2196.867297,
+              351
+            ],
+            [
+              2103.384411,
+              351
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2196.867297,
+              351
+            ],
+            [
+              2196.867297,
+              474.5
+            ],
+            [
+              2297.348902,
+              474.5
+            ],
+            [
+              2297.348902,
+              351
+            ],
+            [
+              2196.867297,
+              351
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2333.441336,
+              973.5
+            ],
+            [
+              2333.441336,
+              1081.5
+            ],
+            [
+              2424.924588,
+              1081.5
+            ],
+            [
+              2424.924588,
+              973.5
+            ],
+            [
+              2333.441336,
+              973.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "5"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2424.924588,
+              973.5
+            ],
+            [
+              2424.924588,
+              1081.5
+            ],
+            [
+              2558.900061,
+              1081.5
+            ],
+            [
+              2558.900061,
+              973.5
+            ],
+            [
+              2424.924588,
+              973.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2419.398139,
+              352
+            ],
+            [
+              2419.398139,
+              470.5
+            ],
+            [
+              2521.379469,
+              470.5
+            ],
+            [
+              2521.379469,
+              352
+            ],
+            [
+              2419.398139,
+              352
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "5"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2531.377639,
+              352.5
+            ],
+            [
+              2531.377639,
+              472
+            ],
+            [
+              2641.857413,
+              472
+            ],
+            [
+              2641.857413,
+              352.5
+            ],
+            [
+              2531.377639,
+              352.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2651.855583,
+              352.5
+            ],
+            [
+              2651.855583,
+              470
+            ],
+            [
+              2743.338835,
+              470
+            ],
+            [
+              2743.338835,
+              352.5
+            ],
+            [
+              2651.855583,
+              352.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2729.361806,
+              40
+            ],
+            [
+              2729.361806,
+              268.5
+            ],
+            [
+              2858.338194,
+              268.5
+            ],
+            [
+              2858.338194,
+              40
+            ],
+            [
+              2729.361806,
+              40
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "innovation lab",
+        "name": "",
+        "items": [
+          "9"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2742.359426,
+              280.5
+            ],
+            [
+              2742.359426,
+              342.5
+            ],
+            [
+              2858.338194,
+              342.5
+            ],
+            [
+              2858.338194,
+              280.5
+            ],
+            [
+              2742.359426,
+              280.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "opem meeting",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2626.848353,
+              975.5
+            ],
+            [
+              2626.848353,
+              1130.5
+            ],
+            [
+              2860.305613,
+              1130.5
+            ],
+            [
+              2860.305613,
+              975.5
+            ],
+            [
+              2626.848353,
+              975.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "large meeting room",
+        "name": "",
+        "items": [
+          "11"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2862.805156,
+              1118.5
+            ],
+            [
+              2862.805156,
+              1190.5
+            ],
+            [
+              2940.790879,
+              1190.5
+            ],
+            [
+              2940.790879,
+              1118.5
+            ],
+            [
+              2862.805156,
+              1118.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "store room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2860.305613,
+              980.5
+            ],
+            [
+              2860.305613,
+              1112.5
+            ],
+            [
+              2944.790146,
+              1112.5
+            ],
+            [
+              2944.790146,
+              980.5
+            ],
+            [
+              2860.305613,
+              980.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "cloak room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2464.3705,
+              1298.5
+            ],
+            [
+              2464.3705,
+              1418
+            ],
+            [
+              2859.798109,
+              1418
+            ],
+            [
+              2859.798109,
+              1298.5
+            ],
+            [
+              2464.3705,
+              1298.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "service balcony",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2859.798109,
+              1196
+            ],
+            [
+              2859.798109,
+              1418
+            ],
+            [
+              3188.23798,
+              1418
+            ],
+            [
+              3188.23798,
+              1196
+            ],
+            [
+              2859.798109,
+              1196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "xl meeting room",
+        "name": "",
+        "items": [
+          "11"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3221.417633,
+              37
+            ],
+            [
+              3221.417633,
+              147
+            ],
+            [
+              3335.896675,
+              147
+            ],
+            [
+              3335.896675,
+              37
+            ],
+            [
+              3221.417633,
+              37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3340.395851,
+              253
+            ],
+            [
+              3340.395851,
+              363.5
+            ],
+            [
+              3458.374253,
+              363.5
+            ],
+            [
+              3458.374253,
+              253
+            ],
+            [
+              3340.395851,
+              253
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3337.3964,
+              185.5
+            ],
+            [
+              3337.3964,
+              242.5
+            ],
+            [
+              3457.374436,
+              242.5
+            ],
+            [
+              3457.374436,
+              185.5
+            ],
+            [
+              3337.3964,
+              185.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "2"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3336.396583,
+              42.5
+            ],
+            [
+              3336.396583,
+              175
+            ],
+            [
+              3437.878005,
+              175
+            ],
+            [
+              3437.878005,
+              42.5
+            ],
+            [
+              3336.396583,
+              42.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "IT-Image room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3462.873429,
+              138.5
+            ],
+            [
+              3462.873429,
+              361.5
+            ],
+            [
+              3593.849451,
+              361.5
+            ],
+            [
+              3593.849451,
+              138.5
+            ],
+            [
+              3462.873429,
+              138.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "large meeting room",
+        "name": "",
+        "items": [
+          "11"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3462.873429,
+              38.5
+            ],
+            [
+              3462.873429,
+              138.5
+            ],
+            [
+              3593.349542,
+              138.5
+            ],
+            [
+              3593.349542,
+              38.5
+            ],
+            [
+              3462.873429,
+              38.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3325.34179,
+              1036.434962
+            ],
+            [
+              3325.611601,
+              1151.934647
+            ],
+            [
+              3483.832204,
+              1151.565038
+            ],
+            [
+              3483.562392,
+              1036.065353
+            ],
+            [
+              3325.34179,
+              1036.434962
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "coffee shop",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3582.909671,
+              1196
+            ],
+            [
+              3582.909671,
+              1409
+            ],
+            [
+              3735.881666,
+              1409
+            ],
+            [
+              3735.881666,
+              1196
+            ],
+            [
+              3582.909671,
+              1196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "learning lab",
+        "name": "",
+        "items": [
+          "15"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3745.879835,
+              1195
+            ],
+            [
+              3745.879835,
+              1409.5
+            ],
+            [
+              3901.851281,
+              1409.5
+            ],
+            [
+              3901.851281,
+              1195
+            ],
+            [
+              3745.879835,
+              1195
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "learning lab",
+        "name": "",
+        "items": [
+          "15"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3548.921568,
+              1037.5
+            ],
+            [
+              3548.921568,
+              1131
+            ],
+            [
+              3643.404271,
+              1131
+            ],
+            [
+              3643.404271,
+              1037.5
+            ],
+            [
+              3548.921568,
+              1037.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3643.404271,
+              1035.5
+            ],
+            [
+              3643.404271,
+              1131
+            ],
+            [
+              3745.385601,
+              1131
+            ],
+            [
+              3745.385601,
+              1035.5
+            ],
+            [
+              3643.404271,
+              1035.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3745.385601,
+              1037
+            ],
+            [
+              3745.385601,
+              1131
+            ],
+            [
+              3842.367846,
+              1131
+            ],
+            [
+              3842.367846,
+              1037
+            ],
+            [
+              3745.385601,
+              1037
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3886.936303,
+              273
+            ],
+            [
+              3886.936303,
+              398
+            ],
+            [
+              3954.423948,
+              398
+            ],
+            [
+              3954.423948,
+              273
+            ],
+            [
+              3886.936303,
+              273
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "copy-print",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3954.423948,
+              273.5
+            ],
+            [
+              3954.423948,
+              379.5
+            ],
+            [
+              4078.901159,
+              379.5
+            ],
+            [
+              4078.901159,
+              273.5
+            ],
+            [
+              3954.423948,
+              273.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "5"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3886.936303,
+              215.5
+            ],
+            [
+              3886.936303,
+              273
+            ],
+            [
+              3975.420104,
+              273
+            ],
+            [
+              3975.420104,
+              215.5
+            ],
+            [
+              3886.936303,
+              215.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3985.418273,
+              217
+            ],
+            [
+              3985.418273,
+              273.5
+            ],
+            [
+              4080.400885,
+              273.5
+            ],
+            [
+              4080.400885,
+              217
+            ],
+            [
+              3985.418273,
+              217
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4078.901159,
+              215
+            ],
+            [
+              4078.901159,
+              379.5
+            ],
+            [
+              4237.372148,
+              379.5
+            ],
+            [
+              4237.372148,
+              215
+            ],
+            [
+              4078.901159,
+              215
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private meeting room",
+        "name": "",
+        "items": [
+          "6"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4600.312843,
+              134
+            ],
+            [
+              4600.312843,
+              209
+            ],
+            [
+              4797.276785,
+              209
+            ],
+            [
+              4797.276785,
+              134
+            ],
+            [
+              4600.312843,
+              134
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo rooms",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4549.322178,
+              37.5
+            ],
+            [
+              4549.322178,
+              127.5
+            ],
+            [
+              4803.275686,
+              127.5
+            ],
+            [
+              4803.275686,
+              37.5
+            ],
+            [
+              4549.322178,
+              37.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "service balcony",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4823.272026,
+              37
+            ],
+            [
+              4823.272026,
+              191.5
+            ],
+            [
+              5017.236516,
+              191.5
+            ],
+            [
+              5017.236516,
+              37
+            ],
+            [
+              4823.272026,
+              37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private-celebration area",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4767.282276,
+              242.5
+            ],
+            [
+              4767.282276,
+              401
+            ],
+            [
+              4876.262325,
+              401
+            ],
+            [
+              4876.262325,
+              242.5
+            ],
+            [
+              4767.282276,
+              242.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4933.251891,
+              255.5
+            ],
+            [
+              4933.251891,
+              370.5
+            ],
+            [
+              5062.228279,
+              370.5
+            ],
+            [
+              5062.228279,
+              255.5
+            ],
+            [
+              4933.251891,
+              255.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "5"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5071.226632,
+              254.5
+            ],
+            [
+              5071.226632,
+              377
+            ],
+            [
+              5174.207779,
+              377
+            ],
+            [
+              5174.207779,
+              254.5
+            ],
+            [
+              5071.226632,
+              254.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5066.400793,
+              377
+            ],
+            [
+              5066.400793,
+              506.5
+            ],
+            [
+              5174.207779,
+              506.5
+            ],
+            [
+              5174.207779,
+              377
+            ],
+            [
+              5066.400793,
+              377
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi private meeting room",
+        "name": "",
+        "items": [
+          "6"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4946.922666,
+              370.5
+            ],
+            [
+              4946.922666,
+              499
+            ],
+            [
+              5062.228279,
+              499
+            ],
+            [
+              5062.228279,
+              370.5
+            ],
+            [
+              4946.922666,
+              370.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "electricl room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5237.869402,
+              464
+            ],
+            [
+              5237.869402,
+              584.5
+            ],
+            [
+              5349.348993,
+              584.5
+            ],
+            [
+              5349.348993,
+              464
+            ],
+            [
+              5237.869402,
+              464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "small meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5233.870134,
+              589
+            ],
+            [
+              5233.870134,
+              720.5
+            ],
+            [
+              5381.343136,
+              720.5
+            ],
+            [
+              5381.343136,
+              589
+            ],
+            [
+              5233.870134,
+              589
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting room",
+        "name": "",
+        "items": [
+          "6"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5249.906101,
+              379
+            ],
+            [
+              5249.906101,
+              464
+            ],
+            [
+              5348.88798,
+              464
+            ],
+            [
+              5348.88798,
+              379
+            ],
+            [
+              5249.906101,
+              379
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "semi enclosed solo rooms",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5233.409121,
+              720.5
+            ],
+            [
+              5233.409121,
+              774.5
+            ],
+            [
+              5381.343136,
+              774.5
+            ],
+            [
+              5381.343136,
+              720.5
+            ],
+            [
+              5233.409121,
+              720.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "solo rooms",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5234.914979,
+              774.5
+            ],
+            [
+              5234.914979,
+              862
+            ],
+            [
+              5350.393838,
+              862
+            ],
+            [
+              5350.393838,
+              774.5
+            ],
+            [
+              5234.914979,
+              774.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              5234.914979,
+              862
+            ],
+            [
+              5234.914979,
+              955.5
+            ],
+            [
+              5350.393838,
+              955.5
+            ],
+            [
+              5350.393838,
+              862
+            ],
+            [
+              5234.914979,
+              862
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4872.981239,
+              894.5
+            ],
+            [
+              4872.981239,
+              1016
+            ],
+            [
+              5027.452959,
+              1016
+            ],
+            [
+              5027.452959,
+              894.5
+            ],
+            [
+              4872.981239,
+              894.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "open meeting room",
+        "name": "",
+        "items": [
+          "4"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4875.980689,
+              1088.5
+            ],
+            [
+              4875.980689,
+              1307.5
+            ],
+            [
+              5018.954515,
+              1307.5
+            ],
+            [
+              5018.954515,
+              1088.5
+            ],
+            [
+              4875.980689,
+              1088.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "large meeting room",
+        "name": "",
+        "items": [
+          "11"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4871.481513,
+              1307.5
+            ],
+            [
+              4871.481513,
+              1410.5
+            ],
+            [
+              5018.954515,
+              1410.5
+            ],
+            [
+              5018.954515,
+              1307.5
+            ],
+            [
+              4871.481513,
+              1307.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "connect room",
+        "name": "",
+        "items": [
+          "3"
+        ],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4875.980689,
+              1016
+            ],
+            [
+              4875.980689,
+              1088.5
+            ],
+            [
+              5016.911592,
+              1088.5
+            ],
+            [
+              5016.911592,
+              1016
+            ],
+            [
+              4875.980689,
+              1016
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "store room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2911.865101,
+              461
+            ],
+            [
+              2911.865101,
+              908
+            ],
+            [
+              3292.795363,
+              908
+            ],
+            [
+              3292.795363,
+              461
+            ],
+            [
+              2911.865101,
+              461
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "lift lobby",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3292.795363,
+              745.5
+            ],
+            [
+              3292.795363,
+              908
+            ],
+            [
+              3407.386791,
+              908
+            ],
+            [
+              3407.386791,
+              745.5
+            ],
+            [
+              3292.795363,
+              745.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "mail room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3292.795363,
+              600
+            ],
+            [
+              3292.795363,
+              744.5
+            ],
+            [
+              3406.882947,
+              744.5
+            ],
+            [
+              3406.882947,
+              600
+            ],
+            [
+              3292.795363,
+              600
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "interfaith room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3292.795363,
+              424
+            ],
+            [
+              3292.795363,
+              600
+            ],
+            [
+              3406.872422,
+              600
+            ],
+            [
+              3406.872422,
+              424
+            ],
+            [
+              3292.795363,
+              424
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "bms-badge room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3407.386791,
+              463
+            ],
+            [
+              3407.386791,
+              908
+            ],
+            [
+              3510.68371,
+              908
+            ],
+            [
+              3510.68371,
+              463
+            ],
+            [
+              3407.386791,
+              463
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "lift lobby",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3662.852196,
+              791
+            ],
+            [
+              3662.852196,
+              901.5
+            ],
+            [
+              3806.825839,
+              901.5
+            ],
+            [
+              3806.825839,
+              791
+            ],
+            [
+              3662.852196,
+              791
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "gents toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3662.852196,
+              671.5
+            ],
+            [
+              3662.852196,
+              791
+            ],
+            [
+              3879.312569,
+              791
+            ],
+            [
+              3879.312569,
+              671.5
+            ],
+            [
+              3662.852196,
+              671.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "getns restroom",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3806.825839,
+              791.5
+            ],
+            [
+              3806.825839,
+              901.5
+            ],
+            [
+              4003.289872,
+              901.5
+            ],
+            [
+              4003.289872,
+              791.5
+            ],
+            [
+              3806.825839,
+              791.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "ladies wellness room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3879.312569,
+              683.5
+            ],
+            [
+              3879.312569,
+              767
+            ],
+            [
+              4006.789231,
+              767
+            ],
+            [
+              4006.789231,
+              683.5
+            ],
+            [
+              3879.312569,
+              683.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "physically challenged toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3879.312569,
+              619
+            ],
+            [
+              3879.312569,
+              683.5
+            ],
+            [
+              3998.391092,
+              683.5
+            ],
+            [
+              3998.391092,
+              619
+            ],
+            [
+              3879.312569,
+              619
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "janitor room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3671.449024,
+              461
+            ],
+            [
+              3671.449024,
+              624.5
+            ],
+            [
+              3785.428157,
+              624.5
+            ],
+            [
+              3785.428157,
+              461
+            ],
+            [
+              3671.449024,
+              461
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "nursing room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3785.428157,
+              477.5
+            ],
+            [
+              3785.428157,
+              624.5
+            ],
+            [
+              4000.888713,
+              624.5
+            ],
+            [
+              4000.888713,
+              477.5
+            ],
+            [
+              3785.428157,
+              477.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "ladies toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4324.3295,
+              618.5
+            ],
+            [
+              4324.3295,
+              889
+            ],
+            [
+              4500.297285,
+              889
+            ],
+            [
+              4500.297285,
+              618.5
+            ],
+            [
+              4324.3295,
+              618.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "staircase",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4666.908664,
+              464
+            ],
+            [
+              4666.908664,
+              593
+            ],
+            [
+              4781.887614,
+              593
+            ],
+            [
+              4781.887614,
+              464
+            ],
+            [
+              4666.908664,
+              464
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "idf room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              4781.887614,
+              462.5
+            ],
+            [
+              4781.887614,
+              593
+            ],
+            [
+              4876.370317,
+              593
+            ],
+            [
+              4876.370317,
+              462.5
+            ],
+            [
+              4781.887614,
+              462.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "f&b store",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3901.851281,
+              917
+            ],
+            [
+              3901.851281,
+              1409.5
+            ],
+            [
+              4872.981239,
+              1409.5
+            ],
+            [
+              4872.981239,
+              917
+            ],
+            [
+              3901.851281,
+              917
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "cafetaria",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3468.905186,
+              1196
+            ],
+            [
+              3468.905186,
+              1417
+            ],
+            [
+              3582.909671,
+              1417
+            ],
+            [
+              3582.909671,
+              1196
+            ],
+            [
+              3468.905186,
+              1196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "kenvue store",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3188.23798,
+              1196
+            ],
+            [
+              3188.23798,
+              1418
+            ],
+            [
+              3468.905186,
+              1418
+            ],
+            [
+              3468.905186,
+              1196
+            ],
+            [
+              3188.23798,
+              1196
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "pantry",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2940.790879,
+              908
+            ],
+            [
+              2940.790879,
+              1190.5
+            ],
+            [
+              3322.93191,
+              1190.5
+            ],
+            [
+              3322.93191,
+              908
+            ],
+            [
+              2940.790879,
+              908
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "reception",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3216.383771,
+              150
+            ],
+            [
+              3216.383771,
+              364
+            ],
+            [
+              3336.396583,
+              364
+            ],
+            [
+              3336.396583,
+              150
+            ],
+            [
+              3216.383771,
+              150
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "tech bar",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2860.948841,
+              37
+            ],
+            [
+              2860.948841,
+              364.5
+            ],
+            [
+              3221.417633,
+              364.5
+            ],
+            [
+              3221.417633,
+              37
+            ],
+            [
+              2860.948841,
+              37
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "pantry",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2436.950946,
+              470
+            ],
+            [
+              2436.950946,
+              624.5
+            ],
+            [
+              2743.338835,
+              624.5
+            ],
+            [
+              2743.338835,
+              470
+            ],
+            [
+              2436.950946,
+              470
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "ladies toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2478.44335,
+              624.5
+            ],
+            [
+              2478.44335,
+              691
+            ],
+            [
+              2552.429805,
+              691
+            ],
+            [
+              2552.429805,
+              624.5
+            ],
+            [
+              2478.44335,
+              624.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "gender neutral toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2429.952227,
+              691
+            ],
+            [
+              2429.952227,
+              768
+            ],
+            [
+              2519.935754,
+              768
+            ],
+            [
+              2519.935754,
+              691
+            ],
+            [
+              2429.952227,
+              691
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "physically challenged toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2399.45781,
+              691
+            ],
+            [
+              2399.45781,
+              768.5
+            ],
+            [
+              2429.952227,
+              768.5
+            ],
+            [
+              2429.952227,
+              691
+            ],
+            [
+              2399.45781,
+              691
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "janitor room",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2604.420287,
+              783
+            ],
+            [
+              2604.420287,
+              889.5
+            ],
+            [
+              2740.895302,
+              889.5
+            ],
+            [
+              2740.895302,
+              783
+            ],
+            [
+              2604.420287,
+              783
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "getns toilet",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              2559.428523,
+              671
+            ],
+            [
+              2559.428523,
+              781
+            ],
+            [
+              2740.395394,
+              781
+            ],
+            [
+              2740.395394,
+              671
+            ],
+            [
+              2559.428523,
+              671
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "type": "gents restroom",
+        "name": "",
+        "items": [],
+        "zone": ""
+      }
+    }
+  ]
+} ; 
 
 // Normalize room types to correct typos
 const normalizeRoomType = (type: string): string => {
