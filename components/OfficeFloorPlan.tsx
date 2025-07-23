@@ -26,7 +26,7 @@ import {
 type Feature = {
   type: "Feature";
   geometry: { type: "Polygon"; coordinates: number[][][] };
-  properties: { type: string; name: string; items?: string[]; zone?: string };
+  properties: { type: string; name: string; items?: string[]; zone?: string; id?:string };
 };
 
 type GeoJSON = {
