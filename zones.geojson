@@ -1,4 +1,4 @@
-{
+const geoJson: GeoJSON = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -4230,4 +4230,4 @@
       }
     }
   ]
-}
+} ; 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
@@ -4267,7 +4268,7 @@ const geoJson: GeoJSON = {
       }
     }
   ]
-} ; 
+};
 
 // Normalize room types to correct typos
 const normalizeRoomType = (type: string): string => {
@@ -4489,8 +4490,8 @@ const OfficeFloorPlan = () => {
     const height = containerRef.current.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x1e293b);
-    scene.fog = new THREE.Fog(0x1e293b, 1000, 3000);
+    scene.background = new THREE.Color(0x0a0a23); // Cosmic dark background
+    scene.fog = new THREE.Fog(0x0a0a23, 1000, 3000);
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 5000);
@@ -4524,9 +4525,9 @@ const OfficeFloorPlan = () => {
     controlsRef.current = controls;
 
     const minimapRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    minimapRenderer.setSize(200, 150);
+    minimapRenderer.setSize(150, 100); // Smaller minimap for mobile
     minimapRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    minimapRenderer.domElement.className = "absolute bottom-4 right-4 border-2 border-gray-700 rounded-lg shadow-lg";
+    minimapRenderer.domElement.className = "absolute bottom-2 right-2 sm:bottom-4 sm:right-4 border-2 border-indigo-900 rounded-lg shadow-lg";
     minimapRef.current = minimapRenderer;
     if (showMinimap) containerRef.current.appendChild(minimapRenderer.domElement);
 
@@ -4543,10 +4544,10 @@ const OfficeFloorPlan = () => {
     minimapCamera.lookAt(0, 0, 0);
     minimapCameraRef.current = minimapCamera;
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0x99ccff, 0.6); // Cosmic blue ambient light
     scene.add(ambientLight);
 
-    const mainLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    const mainLight = new THREE.DirectionalLight(0xe6e6fa, 0.8); // Cosmic white light
     mainLight.position.set(1000, 1600, 1000);
     mainLight.castShadow = true;
     mainLight.shadow.mapSize.width = 4096;
@@ -4559,7 +4560,7 @@ const OfficeFloorPlan = () => {
     mainLight.shadow.camera.bottom = -2000;
     scene.add(mainLight);
 
-    const fillLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    const fillLight = new THREE.DirectionalLight(0xb0c4de, 0.3); // Cosmic fill light
     fillLight.position.set(-1000, 1200, -1000);
     scene.add(fillLight);
 
@@ -4623,17 +4624,17 @@ const OfficeFloorPlan = () => {
 
         label.innerHTML = `
           <div class="flex items-center space-x-2">
-            <span class="text-lg">${getRoomIcon(normalizedType)}</span>
-            <span class="font-medium text-sm">${roomName}</span>
-            ${capacity !== "N/A" ? `<span class="text-xs text-gray-400">(${capacity})</span>` : ""}
+            <span class="text-base sm:text-lg">${getRoomIcon(normalizedType)}</span>
+            <span class="font-medium text-xs sm:text-sm">${roomName}</span>
+            ${capacity !== "N/A" ? `<span class="text-xs text-indigo-300">(${capacity})</span>` : ""}
           </div>
         `;
 
         const colorHex = `#${color.toString(16).padStart(6, "0")}`;
         label.className = `
           absolute pointer-events-none transform -translate-x-1/2 -translate-y-1/2
-          font-sans text-white bg-gray-800/80 backdrop-blur-sm rounded-lg px-3 py-1
-          border border-gray-700 shadow-md transition-opacity duration-300
+          font-sans text-indigo-100 bg-indigo-900/80 backdrop-blur-sm rounded-lg px-2 sm:px-3 py-1
+          border border-indigo-700 shadow-md transition-opacity duration-300
         `;
         (label as any).userData = { centerX: labelCenterX, centerY: labelCenterY };
         containerRef.current?.appendChild(label);
@@ -4643,7 +4644,7 @@ const OfficeFloorPlan = () => {
 
     const floorGeometry = new THREE.PlaneGeometry(6000, 4000);
     const floorMaterial = new THREE.MeshLambertMaterial({
-      color: 0x2d3748,
+      color: 0x1c2526,
       transparent: true,
       opacity: 0.9,
     });
@@ -4653,7 +4654,7 @@ const OfficeFloorPlan = () => {
     floor.receiveShadow = true;
     scene.add(floor);
 
-    const gridHelper = new THREE.GridHelper(6000, 60, 0x4a5568, 0x2d3748);
+    const gridHelper = new THREE.GridHelper(6000, 60, 0x4b0082, 0x191970);
     gridHelper.position.y = -2;
     scene.add(gridHelper);
 
@@ -4800,18 +4801,18 @@ const OfficeFloorPlan = () => {
   };
 
   return (
-    <div className="relative w-full h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans overflow-hidden">
+    <div className="relative w-full h-screen bg-gradient-to-br from-indigo-950 via-gray-900 to-black text-indigo-100 font-sans overflow-hidden">
       {error && (
         <div className="absolute inset-0 bg-gray-900/95 flex items-center justify-center z-50">
-          <div className="text-center p-6 bg-gray-800 rounded-xl shadow-2xl border border-gray-700">
-            <p className="text-red-400 font-semibold text-lg mb-3 flex items-center">
-              <Info className="h-5 w-5 mr-2" />
+          <div className="text-center p-4 sm:p-6 bg-indigo-900/80 rounded-xl shadow-2xl border border-indigo-700">
+            <p className="text-pink-400 font-semibold text-base sm:text-lg mb-3 flex items-center">
+              <Info className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
               Error
             </p>
-            <p className="text-gray-300 mb-4">{error}</p>
+            <p className="text-indigo-200 text-sm mb-4">{error}</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+              className="bg-indigo-600 text-indigo-100 py-1.5 px-3 sm:py-2 sm:px-4 rounded-lg hover:bg-indigo-700 transition-colors text-sm"
             >
               Retry
             </button>
@@ -4823,37 +4824,37 @@ const OfficeFloorPlan = () => {
         <div className="absolute inset-0 bg-gray-900/95 flex items-center justify-center z-50">
           <div className="text-center">
             <div className="relative">
-              <div className="animate-spin rounded-full h-20 w-20 border-4 border-t-blue-500 border-gray-600 mx-auto mb-4"></div>
-              <Building className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-blue-500" />
+              <div className="animate-spin rounded-full h-16 w-16 sm:h-20 sm:w-20 border-4 border-t-indigo-500 border-gray-600 mx-auto mb-4"></div>
+              <Building className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-6 w-6 sm:h-8 sm:w-8 text-indigo-500" />
             </div>
-            <p className="text-gray-200 font-semibold text-lg">Loading Floor Plan...</p>
+            <p className="text-indigo-200 font-semibold text-base sm:text-lg">Loading Cosmic Floor Plan...</p>
           </div>
         </div>
       )}
 
       {selectedRoom && (
         <div className="absolute inset-0 bg-gray-900/80 flex items-center justify-center z-50">
-          <div className="bg-gray-800 rounded-xl p-6 max-w-sm w-full mx-4 shadow-2xl border border-gray-700">
+          <div className="bg-indigo-900/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 max-w-xs w-full mx-4 shadow-2xl border border-indigo-700">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-lg font-semibold text-white flex items-center">
-                <span className="mr-2">{getRoomIcon(normalizeRoomType(selectedRoom.properties.type))}</span>
+              <h3 className="text-base sm:text-lg font-semibold text-indigo-100 flex items-center">
+                <span className="mr-2 text-lg sm:text-xl">{getRoomIcon(normalizeRoomType(selectedRoom.properties.type))}</span>
                 {selectedRoom.properties.name || normalizeRoomType(selectedRoom.properties.type)}
               </h3>
               <button
                 onClick={() => setSelectedRoom(null)}
-                className="p-1 rounded-full hover:bg-gray-700 transition-colors"
+                className="p-1 rounded-full hover:bg-indigo-800 transition-colors"
               >
-                <X className="h-5 w-5 text-gray-300" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
               </button>
             </div>
-            <div className="text-sm text-gray-300 space-y-2">
-              <p><span className="font-medium text-gray-200">Type:</span> {normalizeRoomType(selectedRoom.properties.type)}</p>
-              <p><span className="font-medium text-gray-200">Capacity:</span> {selectedRoom.properties.items?.[0] || "N/A"}</p>
-              <p><span className="font-medium text-gray-200">Zone:</span> {selectedRoom.properties.zone || "N/A"}</p>
+            <div className="text-xs sm:text-sm text-indigo-200 space-y-2">
+              <p><span className="font-medium text-indigo-100">Type:</span> {normalizeRoomType(selectedRoom.properties.type)}</p>
+              <p><span className="font-medium text-indigo-100">Capacity:</span> {selectedRoom.properties.items?.[0] || "N/A"}</p>
+              <p><span className="font-medium text-indigo-100">Zone:</span> {selectedRoom.properties.zone || "N/A"}</p>
             </div>
             <button
               onClick={() => setSelectedRoom(null)}
-              className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
+              className="mt-4 w-full bg-indigo-600 text-indigo-100 py-1.5 sm:py-2 rounded-lg hover:bg-indigo-700 transition-colors text-sm"
             >
               Close
             </button>
@@ -4861,72 +4862,72 @@ const OfficeFloorPlan = () => {
         </div>
       )}
 
-      <div className="absolute top-0 left-0 right-0 bg-gray-900/90 backdrop-blur-lg border-b border-gray-700 z-30">
-        <div className="flex items-center justify-between px-4 py-3 sm:px-6">
-          <div className="flex items-center space-x-3 sm:space-x-4">
+      <div className="absolute top-0 left-0 right-0 bg-indigo-950/90 backdrop-blur-lg border-b border-indigo-800 z-30">
+        <div className="flex items-center justify-between px-3 py-2 sm:px-6 sm:py-3">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <button
               onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label="Toggle sidebar"
             >
-              <Menu className="h-5 w-5 text-gray-300" />
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <Menu className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity sm:block hidden">
                 {sidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
               </span>
             </button>
-            <div className="flex items-center space-x-2">
-              <Building className="h-6 w-6 text-blue-500" />
-              <h1 className="text-lg sm:text-xl font-bold text-gray-200">Office Navigator</h1>
+            <div className="flex items-center space-x-1 sm:space-x-2">
+              <Building className="h-5 w-5 sm:h-6 sm:w-6 text-indigo-400" />
+              <h1 className="text-base sm:text-xl font-bold text-indigo-100">Cosmic Office Navigator</h1>
             </div>
           </div>
           <div className="flex items-center space-x-1 sm:space-x-2">
             <button
               onClick={toggleViewMode}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label={`Switch to ${viewMode === "3d" ? "2D" : "3D"} view`}
             >
-              {viewMode === "3d" ? <Grid className="h-5 w-5 text-gray-300" /> : <Move3D className="h-5 w-5 text-gray-300" />}
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              {viewMode === "3d" ? <Grid className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" /> : <Move3D className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />}
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                 {viewMode === "3d" ? "2D View" : "3D View"}
               </span>
             </button>
             <button
               onClick={() => setShowLabels(!showLabels)}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label={showLabels ? "Hide labels" : "Show labels"}
             >
-              {showLabels ? <Eye className="h-5 w-5 text-gray-300" /> : <EyeOff className="h-5 w-5 text-gray-300" />}
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              {showLabels ? <Eye className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" /> : <EyeOff className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />}
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                 {showLabels ? "Hide Labels" : "Show Labels"}
               </span>
             </button>
             <button
               onClick={() => setShowMinimap(!showMinimap)}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label={showMinimap ? "Hide minimap" : "Show minimap"}
             >
-              <Map className="h-5 w-5 text-gray-300" />
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              <Map className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                 {showMinimap ? "Hide Minimap" : "Show Minimap"}
               </span>
             </button>
             <button
               onClick={toggleFullscreen}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
             >
-              <Maximize2 className="h-5 w-5 text-gray-300" />
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              <Maximize2 className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                 {isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}
               </span>
             </button>
             <button
               onClick={resetView}
-              className="p-2 rounded-lg hover:bg-gray-700 transition-colors relative group"
+              className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors relative group"
               aria-label="Reset view"
             >
-              <RotateCcw className="h-5 w-5 text-gray-300" />
-              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
+              <RotateCcw className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
+              <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 bg-indigo-900 text-indigo-100 text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity hidden sm:block">
                 Reset View
               </span>
             </button>
@@ -4935,31 +4936,31 @@ const OfficeFloorPlan = () => {
       </div>
 
       <div
-        className={`absolute top-16 left-0 bg-gray-800/95 backdrop-blur-lg rounded-r-xl shadow-xl p-4 z-20 transition-all duration-300 ease-in-out ${
-          sidebarCollapsed ? "w-14" : "w-64 sm:w-72"
+        className={`absolute top-12 sm:top-16 left-0 bg-indigo-900/95 backdrop-blur-lg rounded-r-xl shadow-xl p-3 sm:p-4 z-20 transition-all duration-300 ease-in-out ${
+          sidebarCollapsed ? "w-12 sm:w-14" : "w-56 sm:w-72"
         }`}
       >
         {sidebarCollapsed ? (
           <button
             onClick={() => setSidebarCollapsed(false)}
-            className="p-2 rounded-lg hover:bg-gray-700 transition-colors w-full"
+            className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors w-full"
             aria-label="Expand sidebar"
           >
-            <Menu className="h-5 w-5 text-gray-300 mx-auto" />
+            <Menu className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300 mx-auto" />
           </button>
         ) : (
           <>
-            <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold text-gray-200 flex items-center">
-                <Search className="h-5 w-5 mr-2 text-blue-500" />
+            <div className="flex justify-between items-center mb-3 sm:mb-4">
+              <h2 className="text-base sm:text-lg font-semibold text-indigo-100 flex items-center">
+                <Search className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-indigo-400" />
                 Room Directory
               </h2>
               <button
                 onClick={() => setSidebarCollapsed(true)}
-                className="p-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors"
                 aria-label="Collapse sidebar"
               >
-                <X className="h-5 w-5 text-gray-300" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-300" />
               </button>
             </div>
             <input
@@ -4967,25 +4968,25 @@ const OfficeFloorPlan = () => {
               placeholder="Search rooms..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full p-2 mb-4 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-gray-700 text-gray-200 placeholder-gray-400"
+              className="w-full p-1.5 sm:p-2 mb-3 sm:mb-4 border border-indigo-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-xs sm:text-sm bg-indigo-950 text-indigo-200 placeholder-indigo-400"
               aria-label="Search rooms"
             />
-            <div className="mb-4">
+            <div className="mb-3 sm:mb-4">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-1.5 text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors"
+                className="flex items-center space-x-1 sm:space-x-1.5 text-xs sm:text-sm font-semibold text-indigo-300 hover:text-indigo-400 transition-colors"
                 aria-expanded={showFilters}
               >
-                <Filter className="h-4 w-4" />
+                <Filter className="h-3 w-3 sm:h-4 sm:w-4" />
                 <span>Filters</span>
-                <ChevronDown className={`h-4 w-4 transform transition-transform ${showFilters ? "rotate-180" : ""}`} />
+                <ChevronDown className={`h-3 w-3 sm:h-4 sm:w-4 transform transition-transform ${showFilters ? "rotate-180" : ""}`} />
               </button>
               {showFilters && (
-                <div className="mt-3 space-y-3">
+                <div className="mt-2 sm:mt-3 space-y-2 sm:space-y-3">
                   <select
                     value={selectedFilter}
                     onChange={(e) => setSelectedFilter(e.target.value)}
-                    className="w-full p-2 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-gray-700 text-gray-200"
+                    className="w-full p-1.5 sm:p-2 border border-indigo-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-xs sm:text-sm bg-indigo-950 text-indigo-200"
                     aria-label="Filter by room type"
                   >
                     <option value="all">All Room Types</option>
@@ -4998,7 +4999,7 @@ const OfficeFloorPlan = () => {
                   <select
                     value={activeZone}
                     onChange={(e) => setActiveZone(e.target.value)}
-                    className="w-full p-2 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm bg-gray-700 text-gray-200"
+                    className="w-full p-1.5 sm:p-2 border border-indigo-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-xs sm:text-sm bg-indigo-950 text-indigo-200"
                     aria-label="Filter by zone"
                   >
                     <option value="all">All Zones</option>
@@ -5011,17 +5012,17 @@ const OfficeFloorPlan = () => {
                 </div>
               )}
             </div>
-            <div className="space-y-3 max-h-[calc(100vh-16rem)] overflow-y-auto">
+            <div className="space-y-2 sm:space-y-3 max-h-[calc(100vh-16rem)] overflow-y-auto">
               {filteredRooms.map(feature => (
                 <button
                   key={feature.properties.name || feature.properties.type + feature.geometry.coordinates[0][0].toString()}
                   onClick={() => focusOnRoom(feature)}
-                  className="w-full text-left p-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center space-x-2 text-sm text-gray-200"
+                  className="w-full text-left p-1.5 sm:p-2 rounded-lg hover:bg-indigo-800 transition-colors flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm text-indigo-200"
                 >
-                  <span className="text-lg">{getRoomIcon(normalizeRoomType(feature.properties.type))}</span>
+                  <span className="text-base sm:text-lg">{getRoomIcon(normalizeRoomType(feature.properties.type))}</span>
                   <span>{feature.properties.name || normalizeRoomType(feature.properties.type)}</span>
                   {feature.properties.items?.[0] && (
-                    <span className="text-xs text-gray-400">({feature.properties.items[0]})</span>
+                    <span className="text-xs text-indigo-300">({feature.properties.items[0]})</span>
                   )}
                 </button>
               ))}
@@ -5030,29 +5031,29 @@ const OfficeFloorPlan = () => {
         )}
       </div>
 
-      <div className="absolute top-20 right-4 bg-gray-800/95 backdrop-blur-lg rounded-xl shadow-xl p-4 z-10 max-w-xs w-full">
-        <h3 className="text-lg font-semibold text-gray-200 flex items-center mb-3">
-          <Info className="h-5 w-5 mr-2 text-blue-500" />
+      <div className="absolute top-14 sm:top-20 right-2 sm:right-4 bg-indigo-900/95 backdrop-blur-lg rounded-xl shadow-xl p-3 sm:p-4 z-10 max-w-xs w-11/12 sm:w-72">
+        <h3 className="text-base sm:text-lg font-semibold text-indigo-100 flex items-center mb-2 sm:mb-3">
+          <Info className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-indigo-400" />
           Office Statistics
         </h3>
-        <div className="text-sm space-y-2">
+        <div className="text-xs sm:text-sm space-y-1 sm:space-y-2">
           <div className="flex justify-between items-center">
-            <span className="text-gray-300 flex items-center">
-              <Building className="h-4 w-4 mr-1" />
+            <span className="text-indigo-300 flex items-center">
+              <Building className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
               Total Spaces
             </span>
-            <span className="font-medium text-blue-400">{geoJson.features.length}</span>
+            <span className="font-medium text-indigo-400">{geoJson.features.length}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-gray-300 flex items-center">
-              <Layers className="h-4 w-4 mr-1" />
+            <span className="text-indigo-300 flex items-center">
+              <Layers className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
               Room Types
             </span>
             <span className="font-medium text-green-400">{Object.keys(roomStats).length}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-gray-300 flex items-center">
-              <Users className="h-4 w-4 mr-1" />
+            <span className="text-indigo-300 flex items-center">
+              <Users className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
               Total Capacity
             </span>
             <span className="font-medium text-purple-400">
@@ -5063,8 +5064,8 @@ const OfficeFloorPlan = () => {
       </div>
 
       {hoveredRoom && (
-        <div className="absolute bottom-4 left-4 bg-gray-800/95 backdrop-blur-lg rounded-lg shadow-md p-3 z-10">
-          <p className="text-sm font-medium text-gray-200">Hovered: {hoveredRoom}</p>
+        <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 bg-indigo-900/95 backdrop-blur-lg rounded-lg shadow-md p-2 sm:p-3 z-10">
+          <p className="text-xs sm:text-sm font-medium text-indigo-100">Hovered: {hoveredRoom}</p>
         </div>
       )}
 
